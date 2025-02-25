@@ -32,6 +32,12 @@ async def ping(ctx):
 async def pieds(ctx):
   await ctx.send(f"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fmemes%2Fcomments%2Fy3p9n6%2Fsince_we_not_using_thumbs_up_heres_a_toe_up%2F%3Ftl%3Dfr&psig=AOvVaw3ITOIA8B9FN75aAVT4kFLI&ust=1740522747829000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC42diu3YsDFQAAAAAdAAAAABAE")
 
+@bot.event
+async def on_ready():
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game("Zouzouland"))
+    print(f"Connecté en tant que {bot.user}")
+
+
 token = os.environ['TOKEN_BOT_DISOCRD']
 
 import threading
